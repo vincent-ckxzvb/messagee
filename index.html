@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message For you from Vincent</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .popup-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .popup-btn:hover {
+            background-color: #45a049;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+        .popup h2 {
+            margin: 0 0 15px;
+        }
+        .popup p {
+            font-size: 16px;
+            color: #333;
+            text-align: left;
+        }
+        .popup .close-btn {
+            background-color: #f44336;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .popup .close-btn:hover {
+            background-color: #e53935;
+        }
+        #overlay {
+            position: fixed;
+            display: none;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="popup-btn" onclick="showPopup()">Click me for a message</button>
+
+    <div id="overlay"></div>
+
+    <div class="popup" id="messagePopup">
+        <h2>Popup Message</h2>
+        <p>Hey, I’ve read what you said, and I just want to clear things up because you deserve to know the truth. First off, I haven’t moved on. Not even close. I know I’m talking to someone right now, but it’s not romantic, and to be honest, it’s not going well. My mind and heart are still with you.<br><br>
+        When we broke up, I thought you had already moved on, that you had found someone new. It was like I had to accept that I lost you, so I ended up talking to someone else. But deep down, I never really got over you. I just didn’t know what else to do. And now I realize that I acted on something that wasn’t even real because you didn’t actually have a new guy.<br><br>
+        The truth is, I still care about you a lot. I still think about what we had, and I know I made mistakes along the way. But if there’s a chance for us to talk things out and fix this, I’m open to that because I haven’t let go of what we had.<br><br>
+        I hope you understand why I acted the way I did, even though I know it hurt both of us. But I want you to know that you still mean a lot to me, and if there’s any way we can figure things out, I'd like to try.     -Vincent
+        </p>
+        <button class="close-btn" onclick="closePopup()">Close</button>
+    </div>
+
+    <script>
+        function showPopup() {
+            document.getElementById('messagePopup').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('messagePopup').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
